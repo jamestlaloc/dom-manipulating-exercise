@@ -25,7 +25,10 @@ header.textContent = "I'm in a div";
 const paragraph = document.createElement("p");
 paragraph.textContent = "ME TOO!"
 
-button.addEventListener('click', () => {
+button.addEventListener('click', (e) => {
+  console.log(e);
+  e.target.style.background = "green";
+  e.target.textContent = "You clicked me!";
   container.appendChild(content)
   container.appendChild(para);
   container.appendChild(hThree);
